@@ -9,6 +9,7 @@ print(cities[1:3]) #prints the elements from ith index to j-1 th index
 print(cities[1:9]) #Will not give an error when you enter an index 9 which is out of the range of the list while slicing. It will just print the list from ith index to the end index
 print(cities[1:-1]) #-1 represents the last index. so from ith index to 2nd last index
 print(cities[:]) #prints the whole list, same as print(cities)
+print(cities[-2:-3])#prints empty list as the first should be lower and the next value should be higher
 print(cities)
 print(cities[90:100]) # with both the start and end indices are non existent in this case so it wil just print an empty list.
 
@@ -82,3 +83,13 @@ print(table)
 
 nums=[1,2]*10
 print(nums) #Creates a list containing 10 pairs of 1,2
+
+values=[[3-x for x in range(2)] for y in range(5)]
+
+sum=0.0
+
+for row in values:
+    for cell in row:
+        sum+=cell
+
+print(sum)
