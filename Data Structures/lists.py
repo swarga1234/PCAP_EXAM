@@ -49,7 +49,7 @@ list_new[1]=-5
 print("Original:",list_original)
 print("New:",list_new)
 
-#In the above case when we try to modify the list_original it is refekected in the list_new and vice versa. This happens because list_new becomes a referenece to the list_original and thus both of them just point to the same memory address and so modifying one will be reflected in other. However assigning list_original to the list_new may not be reasonable for our purpose like if we want to modify the list_original and later we want to compare the current values of the list_original with the previous values of the list_original, then using this technique will change both the lists and we may never have the original values. Thus in this case we will have to slice the list_original when we assign its value to the list_new. This will ensure that modifying one will not be reflected on both the lists.
+#In the above case when we try to modify the list_original it is refekected in the list_new and vice versa. This happens because list_new becomes a reference to the list_original and thus both of them just point to the same memory address and so modifying one will be reflected in other. However assigning list_original to the list_new may not be reasonable for our purpose like if we want to modify the list_original and later we want to compare the current values of the list_original with the previous values of the list_original, then using this technique will change both the lists and we may never have the original values. Thus in this case we will have to slice the list_original when we assign its value to the list_new. This will ensure that modifying one will not be reflected on both the lists.
 
 list_original=[1,2,3]
 list_new=list_original[:]

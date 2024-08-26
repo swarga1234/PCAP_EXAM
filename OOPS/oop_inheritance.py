@@ -1,11 +1,22 @@
 class Vehicle:
+    message='This is a message from the Vehicle class!'
     def __init__(self,speed):
         self.speed=speed
+    
+    def speed_up(self):
+        self.speed+=5
 
 class LandVehicle(Vehicle): #LanVehicle inherits Vehicle. In Python the superclass is written in braces beside the subclass
     def __init__(self, speed,wheel_count):
         super().__init__(speed)
         self.wheel_count=wheel_count
+        print(super().message)  #Both Vehicle.message and super().message can be used
+    
+    def super_speed(self):
+        print('Super speed activated!')
+        super().speed_up()
+        super().speed_up()
+        super().speed_up()
 
 class Car(LandVehicle):
     pass
@@ -29,3 +40,11 @@ print(my_car.__dict__) #{'wheel_count': 5}
 
 # Scenario 3: If we also want to access the properties of the class Vehicle then we can invoke the constructor of the class Vehicle in the subclass LandVehicle usig super
 print(my_car.__dict__) #{'speed': 5, 'wheel_count': 6}
+
+my_car.super_speed()
+
+print(my_car.__dict__)
+
+print(Vehicle.__bases__)
+print(LandVehicle.__bases__)
+print(Car.__bases__) #Only lists the direct superclass in case of multilevel inheritance
