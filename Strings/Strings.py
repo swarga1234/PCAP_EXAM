@@ -4,8 +4,9 @@ print('Hi Theres!'[1:]) #Returns the string from ith character to the end
 print('Hi Theres!'[:5]) #Returns the string until ith (ith char is excluded) character from the start
 print('Hi Theres!'[3:6]) #Returns the string from ith character to jth (excluded) character
 print('I\'m Swarga') #Return I'm Swarga. \' represents '
-print(ord('a')) #Returns the ASCII value of a character
+print(ord('a')) #Returns the ASCII value of a character. ASCII can also be named as codepoint in the questions.
 print(chr(65)) #Returns the char for the gives number. In this 'A' for the input 65.
+'Hello'
 
 #For representing multiline strings you need to enclose the string in '''
 multi_line_string='''Line 1
@@ -55,7 +56,7 @@ print('123'.isdigit()) #returns true if the string only contains digits.
 separator=' '
 print(separator.join(['This is','a spectacular place','to be']))
 
-#split function can split a string in to a number of substrings based on separtor, whitspace of new line \n character
+#split function can split a string in to a number of substrings based on separtor, whitspace or new line \n character
 
 print('How many\nstrings will\nyou see?'.split())
 
@@ -102,3 +103,27 @@ print("Hi!",first_name,"Welcome to Python course!!",sep='-')#Here we are passing
 
 #first_name[2]='k'
 #print(first_name) #TypeError: 'str' object does not support item assignment
+print("Swarga".endswith("war"))
+
+str="MyExamCloud"
+str=str.center(20,'*') # Will pad with * on left and right such that the total length of the str becomes 20
+print(str)
+print(len(str))
+
+str="www.myexamcloud"
+print(str.center(20))
+print(str.lstrip("w."))
+
+str="My name is Swarga!!"
+print(str.replace("Swarga","Toshali",90))
+print(str[::-1])
+str2=str[:]
+print(str==str2)
+print(str is str2)
+print(id(str2)==id(str))
+
+list_1=[1,2,3,4]
+list_2=list_1[:]
+
+print(list_1==list_2)
+print(list_1 is list_2)

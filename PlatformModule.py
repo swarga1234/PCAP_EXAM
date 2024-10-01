@@ -1,6 +1,11 @@
 # The Platform module can tell you about the Python version, operating system and the Hardware you are using.
+#This module allows you to know where are you and what components work for you
 import platform
+import os
 
+print(os.name) #This gives the OS name. posix for unix, nt for windows and java for Jython
+#The function uname returns an object containing information about the current operating system.
+print(os.uname())#This returns the infos as systemname, nodename, version, release, version, machine
 print(platform.platform()) #Gives the details of the OS
 #the platform.platform(aliased=bool, terse=bool) has 2 parameters which are by default set to false.
 #if aliased is set to true then it will show some aliased name of the OS if available.
@@ -28,3 +33,6 @@ print(platform.python_version_tuple())
 #This prints the system's release version as a single string
 print(platform.version()) #Don't confuse this with platform.python_version_tuple()
 print(platform.python_version()) # prints the python version
+# platform.system()
+# PyPI: Python package Index. It is also referred to as cheese shop
+print(0%0)

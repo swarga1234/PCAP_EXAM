@@ -6,6 +6,7 @@ import random
 # random.seed(35)
 
 #so either don't set the seed manually or else set seed=time_now
+#random.random() takes no arguments
 print(random.random())
 print(random.random())
 print(random.random())

@@ -1,7 +1,7 @@
 try:
     value=int(input('Please enter a number:'))
     print('The inverse of a number',value,'is',1/value)
-except ValueError:
+except (ValueError) as e:
     print('Entered value is not a number!')
 except ZeroDivisionError:
     print('Divison by Zero is not a valid operation!')
@@ -17,3 +17,13 @@ def calc_inverse(num):
     return 1/num
 
 calc_inverse(4)
+def test():
+    try:
+        n=100/0
+        return 'A'
+    except:
+        return 'B'
+    finally:
+        return 'C'
+
+print(test())

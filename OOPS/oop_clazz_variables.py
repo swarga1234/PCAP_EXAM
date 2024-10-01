@@ -1,4 +1,4 @@
-# Class variable is stored in the class and has only one copy. It can be accessed outside the class even with creating the object of the class. In easy words it is basically static variable.
+# Class variable is stored in the class and has only one copy. It can be accessed outside the class even with creating the object of the class. In easy words it is basically static variable. One difference if the value of the class variable is set explicitly for a object then that object would have a different copy of the class variable.
 
 class Dog:
 
@@ -16,7 +16,7 @@ my_pet_2=Dog('Rocky',4)
 my_pet_3=Dog('Tommy',4)
 
 print(my_pet_1)
-
+my_pet_2.counter=5
 print(my_pet_1.counter)
 print(my_pet_2.counter)
 print(my_pet_3.counter)
@@ -56,3 +56,18 @@ print(type(my_pet_1).__name__)
 
 #__module__ propety returns name of the module of which the class is part of. If the class is in the same file from where the __module__ is called then it will return __main__
 print(Cat.__module__)
+
+class MyList:
+    l=1
+    def __init__(self):
+        self.list=[]
+
+    def add(self,p):
+        self.list.append(p)
+    
+d,e=MyList(),MyList()
+d.add("Spam")
+e.add("ham")
+e.l=2
+MyList.l=3
+print(d.list,d.l,e.list,e.l)

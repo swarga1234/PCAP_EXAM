@@ -48,3 +48,6 @@ print(my_car.__dict__)
 print(Vehicle.__bases__)
 print(LandVehicle.__bases__)
 print(Car.__bases__) #Only lists the direct superclass in case of multilevel inheritance
+
+my_lamda2= lambda x: x*x
+print(my_lamda2(2))
